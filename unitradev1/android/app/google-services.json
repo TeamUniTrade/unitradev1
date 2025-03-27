@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "640211108399",
+    "firebase_url": "https://unitrade-ebfdb-default-rtdb.firebaseio.com",
+    "project_id": "unitrade-ebfdb",
+    "storage_bucket": "unitrade-ebfdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640211108399:android:09a85c31b97b3ac834fcda",
+        "android_client_info": {
+          "package_name": "com.example.unitradev1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyQEvYRe8NQ3YC1X8FcJ_1G0WnnfuRLew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:640211108399:android:56bcf4d26ac92cb834fcda",
+        "android_client_info": {
+          "package_name": "com.unitrade.hbcu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyQEvYRe8NQ3YC1X8FcJ_1G0WnnfuRLew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
