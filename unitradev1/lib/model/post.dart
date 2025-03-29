@@ -2,7 +2,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Post {
-  String? id;
   String? title;
   String? description;
   List<String>? images;
@@ -11,7 +10,6 @@ class Post {
   List<String>? tags;
 
   Post({
-    this.id,
     this.title,
     this.description,
     this.images,
@@ -21,7 +19,6 @@ class Post {
   });
 
   Post.fromDocumentSnapshot({required DocumentSnapshot documentSnapshot}) {
-    id = documentSnapshot.id;
     title = documentSnapshot['title'];
     description = documentSnapshot['description'];
     images = List<String>.from(documentSnapshot['images']);
