@@ -18,6 +18,8 @@ class Post {
     this.tags,
   });
 
+  Post.empty();
+
   Post.fromDocumentSnapshot({required DocumentSnapshot documentSnapshot}) {
     title = documentSnapshot['title'];
     description = documentSnapshot['description'];
