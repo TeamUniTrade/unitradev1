@@ -13,3 +13,7 @@ class Message {
     time = documentSnapshot['time'];
   }
 }
+
+
+// Message refers to individual texts a user has sent and received from/to any other user 
+// Conversation are interactions in pairs (between 2 users - current user and 1 more user)

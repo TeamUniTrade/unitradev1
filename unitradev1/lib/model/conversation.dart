@@ -15,10 +15,12 @@ class Conversation {
       this.lastmsg,
   });
 
+  Conversation.empty();
+
   Conversation.fromDocumentSnapshot(
       {required DocumentSnapshot documentSnapshot}) {
     senderId = documentSnapshot['senderId'];
-    senderName = documentSnapshot['sendeName'];
+    senderName = documentSnapshot['senderName'];
     receiverId = documentSnapshot['receiverId'];
     receiverName = documentSnapshot['receiverName'];
     lastmsg = documentSnapshot['lastmsg'];

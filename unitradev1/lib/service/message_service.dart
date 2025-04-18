@@ -15,12 +15,18 @@ class MessagingService {
     final UserService _userService = UserService();
     final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
+    String getConversationId(String senderId, String receiverId){
+      List<String> ids = [senderId, receiverId];
+      ids.sort();
+      String conversationId = ids.join("_");
+      return conversationId;
+    }
+
     Future<void> createConversation(String receiverId) async{
       try{
+
         String senderId = _auth.currentUser!.uid;
-        List<String> ids = [senderId, receiverId];
-        ids.sort();
-        String conversationId = ids.join("_");
+        String conversationId = getConversationId(senderId, receiverId);
 
         User sender = await _userService.getCurrentUser(senderId);
         User receiver = await _userService.getCurrentUser(receiverId);
@@ -43,9 +49,7 @@ class MessagingService {
     Future<void> sendMessage(String receiverId, String message) async{
       try{
         String senderId = _auth.currentUser!.uid;
-        List<String> ids = [senderId, receiverId];
-        ids.sort();
-        String conversationId = ids.join("_");
+        String conversationId = getConversationId(senderId, receiverId);
 
         DocumentSnapshot conversationDoc = await _firestore.collection("conversations").doc(conversationId).get();
 
